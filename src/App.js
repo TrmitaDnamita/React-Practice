@@ -1,15 +1,16 @@
 import './App.css';
-//A constant export should be imported with { }
-import { Greet } from './components/Greet'
+import Navbar from './Navbar/Navbar';
+import Home from './Navbar/Home';
 
 function App() {
-  return (
-    <div className="App">
-      <div className="content">
-        <h1><Greet /></h1>
+    return (
+      <div className="App">
+        <Navbar />
+        <div className="Content">
+            <Home />
+        </div>
       </div>
-    </div>
-  );
-}
-
-export default App;
+    );
+  }
+  
+  export default App;
