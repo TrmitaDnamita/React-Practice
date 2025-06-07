@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
     return (
         <nav className="Navbar">
-            <h1>Placeholder Blog</h1>
+            <h1 class="App-logo">Placeholder Blog</h1>
             <div className="Links">
                 <a href="/">Home</a>
                 <a href="/Create" style={{
