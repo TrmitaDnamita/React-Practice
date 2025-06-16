@@ -1,0 +1,117 @@
+:root {
+  --selection-color: hsla(0, 0%, 68%, 0.035);
+  --selection-color-button: hsla(0, 0%, 100%, 0.829);
+  --cancel-color-button: hsla(0, 81%, 47%, 0.096);
+}
+
+.WhoToFollow {
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  max-width: 350px;
+  
+  border: 1.25px solid var(--border-color);
+  border-radius: 10px;
+  
+  margin-inline: auto;
+}
+
+.WhoToFollow h2 {
+  font-size: var(--size-lg);
+  font-weight: bold;
+  
+  padding-block: var(--padding-2);
+}
+
+.WhoToFollow a {
+  text-decoration: none;
+  color: var(--user-color);
+  
+  display: block;
+  height: 100%;
+  padding-block: var(--padding-3);
+}
+
+.WhoToFollow a:hover {
+  background-color: var(--selection-color);
+}
+
+.WhoToFollow .ShowMore {
+	font-size: var(--size-md);
+}
+
+.WhoToFollow h2, .WhoToFollow .ShowMore {
+  padding-inline: var(--padding-3);
+}
+
+.UserRecommendation {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-3);
+  
+  padding-inline: var(--padding-3);
+  padding-block: var(--padding-2);
+  
+  cursor: pointer;
+}
+
+.UserRecommendation:hover {
+  background-color: var(--selection-color);
+}
+
+.UserRecommendation h3 {
+  font-size: var(--size-md);
+  font-weight: bolder;
+}
+
+.UserRecommendation h3:hover {
+  text-decoration: underline;
+}
+
+.UserRecommendation span {
+  font-size: var(--size-sm);
+}
+
+.UserRecommendation img {
+  width: var(--width-sm);
+  border-radius: var(--width-sm);
+  vertical-align: middle;
+}
+
+.UserRecommendation aside {
+  margin-left: auto;
+}
+
+.UserRecommendation button {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  
+  font-weight: bold;
+  
+  min-width: var(--width-lg);
+  height: 28px;
+  padding-inline: var(--padding-4);
+  
+  border: none;
+  border-radius: var(--width-sm);
+  
+  cursor: pointer;
+  
+  &[data-status="following"] {
+    background-color: var(--dark-color);
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+  }
+}
+
+.UserRecommendation button:hover {
+  background-color: var(--selection-color-button);
+  transition: 0.1s ease-in-out;
+  
+  &[data-status="following"] {
+    background-color: var(--cancel-color-button);
+    border: 1px solid var(--cancel-color);
+    color: var(--cancel-color);
+  }
+}

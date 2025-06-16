@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" 
+text-rendering="geometricPrecision" image-rendering="optimizeQuality" 
+fill-rule="evenodd" clip-rule="evenodd" viewBox="110 124.5 260 260" preserveAspectRatio="xMidYMid meet">
+  <rect width="380" height="380" fill="#000"/>
+  <path d="M110 148h32v170h-32zM110 329h32v32h-32z" fill="#fff"/>
+  <g transform="translate(10, 0)">
+    <path fill="#fff" fill-rule="nonzero" d="M323.74 148.35h36.12l-78.91 90.2 92.83 122.73h-72.69l-56.93-74.43-65.15 74.43h-36.14l84.4-96.47-89.05-116.46h74.53l51.46 68.04 59.53-68.04zm-12.68 191.31h20.02l-129.2-170.82H180.4l130.66 170.82z"/>
+  </g>
+</svg>
