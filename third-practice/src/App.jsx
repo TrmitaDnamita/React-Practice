@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import { Cell } from './components/Cell.jsx'
+import { Board } from './components/Board.jsx'
 import { WinnerPOPUP } from './components/WinnerPOPUP.jsx'
 
-import { PLAYERS_STATUS, TURNS, WINNER_COMBOS } from './constants.js'
+import { PLAYERS_STATUS, TURNS } from './constants.js'
 import { UpdateGame, UpdateTurn } from './logic/board.js'
 
 import './styles/App.css'
@@ -22,7 +22,7 @@ export function App() {
     
     boardState(newBoard);
     
-    turnState( UpdateTurn(turn) );
+    updateTurnState(turn);
     
     winnerStateCheck( UpdateGame(newBoard) );
   };
@@ -33,39 +33,17 @@ export function App() {
     winnerStateCheck(PLAYERS_STATUS.SKIP);
   };
   
+  const updateTurnState = (turn) => { 
+    turnState( UpdateTurn(turn) ); 
+  };
+  
   return (
     <main className='board'>
       
       <h1 className='game-title'>Tic Tac Toe</h1>
-      
-      <section className='game'>
-        {
-          board.map((_, index) => {
-            return (
-              <Cell key={index} index={index} updateFunction={updateBoard} shouldBeFilled={true}> 
-                {board[index]}
-              </Cell>
-            )
-          })
-        }
+      <section>
+        <Board turn={turn} board={board} updateBoard={updateBoard} updateTurn={updateTurnState}/>
       </section>
-      
-      <section className='turn'>
-        {[TURNS.X, TURNS.O].map((player) => (
-            <Cell
-              key={player}
-              isSelected = {turn === player} 
-              updateFunction={turn === player ? null : () => {
-                const newTurn = UpdateTurn(turn);
-                turnState( newTurn );
-                return newTurn;
-              }}
-            >
-              {player}
-            </Cell>
-        ))}
-      </section>
-      
       <section>
         <WinnerPOPUP winState={winnerState} resBoard={resetBoard}/>
       </section>

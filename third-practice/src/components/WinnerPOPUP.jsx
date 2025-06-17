@@ -3,14 +3,15 @@ import { PLAYERS_STATUS } from '../constants.js';
 
 import '../styles/WinnerModal.css';
 
-export function WinnerPOPUP ( winState, resBoard ) {
+/**@param {string} winState @param {function} resBoard */
+export function WinnerPOPUP ({ winState, resBoard }) {
+	console.log(winState);
 	if (winState === PLAYERS_STATUS.SKIP) return null;
 	
-	const text = 
-		(winState === PLAYERS_STATUS.DRAW)
+	const text = (winState === PLAYERS_STATUS.DRAW)
 			? winState
 			: <>
-					<span className='winner'>{winState[0]}</span>
+					<span className='winner'>{winState.at(0)}</span>
 					{winState.slice(1)}
 				</>
 	;
