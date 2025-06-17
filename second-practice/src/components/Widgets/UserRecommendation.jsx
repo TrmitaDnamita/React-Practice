@@ -1,13 +1,15 @@
 import { useState } from "react";
 
-export function UserRecommendation ({
-	userName="JohnDoe", 
-	displayName="John Doe"
-}) 
+export function UserRecommendation (
+	{ userName="JohnDoe", 
+		displayName="John Doe", 
+		initialIsFollowing=false
+	}
+) 
 {
-	const image = `https://unavatar.io/${userName}`;
+	const image = `https://unavatar.io/${userName}?fallback=https://avatar.vercel.sh/37t?size=400`;
 	
-	const [isFollowing, setIsFollowing] = useState(false);
+	const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
 	const [isHovered, setIsHovered] = useState(false);
 	
 	const buttonText = isFollowing 	
@@ -44,7 +46,7 @@ export function UserRecommendation ({
 			<aside>
 				<button 
 					onMouseEnter={handleButtonHoverEnter} 
-					onMouseLeave={handleButtonHoverLeave} 
+					onMouseLeave={handleButtonHoverLeave}
 					onClick={handleFollow} 
 					className="FollowButton" 
 					data-status={buttonStatus}

@@ -1,17 +1,28 @@
 import { UserRecommendation } from './UserRecommendation.jsx'
 
 import '../../styles/Widgets.css'
-export function WhoToFollow () {
-  const x = { userName: 'x', displayName: 'X', isFollowing: true };
-  const KikoBeats = { userName: 'KikoBeats', displayName: 'Kiko Beats', isFollowing: false };
-  const YouTube = { userName: 'YouTube', displayName: 'YouTube', isFollowing: false };
-  
+
+export function WhoToFollow ( {
+  recommendedUsers= [{
+    userName: "JohnDoe", 
+    displayName: "John Doe", 
+    userBio: "Lorem ipsum dolor sit amet consectetur.", 
+    initialIsFollowing: false}]
+}) 
+{
 	return (
 		<article className='WhoToFollow'>
       <h2>Who to follow</h2>
-      <UserRecommendation {... x} />
-      <UserRecommendation {... KikoBeats} />
-      <UserRecommendation userName='YouTube' displayName='YouTube' isFollowing={false} />
+      {
+        recommendedUsers.map((user) => 
+          <UserRecommendation key={user.userName}
+          userName={user.userName} 
+          displayName={user.displayName} 
+          userBio={user.userBio} 
+          initialIsFollowing={user.initialIsFollowing} 
+          />
+        )
+      }
       <a href="https://x.com/explore/tabs/for-you">
         <span className="ShowMore">Show more</span>
       </a>

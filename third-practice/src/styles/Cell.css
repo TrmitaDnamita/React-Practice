@@ -1,0 +1,35 @@
+.cell{
+	width: var(--width-lg);
+	height: var(--width-lg);
+	
+	border: 2px solid var(--border-color);
+	border-radius: var(--width-sm);
+	
+	display: grid;
+	place-items: center;
+	
+	font-size: var(--size-lg);
+	
+	cursor: pointer;
+}
+
+.cell:hover{
+	border: 2px solid var(--cell-color);
+	background-color: var(--cell-bg-color);
+	box-shadow: var(--box-shadow);
+	transform: translateY(2px);
+	
+	transition: 0.2s ease-in-out;
+}
+
+.cell.filled {
+	opacity: 0.6;
+	cursor: default;
+}
+
+.cell.filled:hover {
+	border: 2px solid var(--border-warn-color);
+	background-color: var(--cell-bg-warn-color);
+	box-shadow: none;
+	transform: none;
+}

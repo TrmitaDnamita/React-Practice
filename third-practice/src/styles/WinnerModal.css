@@ -1,0 +1,87 @@
+.game-ended {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	
+	background-color: #000a;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.modal-replay {
+	backdrop-filter: blur(3px);
+	background-color: var(--cell-bg-color);
+	
+	width: var(--width-xxl);
+	max-width: 100%;
+	
+	padding-block: var(--padding-xxl);
+	border: 2px solid var(--cell-color);
+	border-radius: var(--size-lg);
+	
+	animation: pop-in 0.5s ease-in-out forwards;
+}
+
+@keyframes pop-in {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.modal-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	gap: var(--gap-md);
+}
+
+.winner {
+	background-color: var(--dark-color);
+	border-radius: var(--size-lg);
+	border: 2px solid var(--light-color);
+	
+	padding: var(--padding-xsm) var(--padding-md);
+	
+	color: var(--light-color);
+	
+	font-weight: bolder;
+}
+
+.modal-replay button {
+	font-size: var(--size-lg);
+	font-weight: bolder;
+	
+	margin-block: var(--padding-md);
+	
+	padding-block: var(--padding-md);
+	padding-inline: var(--padding-lg);
+	
+	border-radius: var(--size-md);
+	
+	color: var(--dark-color);
+	background-color: var(--light-color);
+	border: 2px solid var(--dark-color);
+	
+	cursor: pointer;
+}
+
+.modal-replay button:hover {
+	background-color: var(--dark-color);
+	color: var(--light-color);
+	
+	border: 2px solid var(--light-color);
+	box-shadow: var(--box-shadow);
+	
+	transition: 0.2s ease-in-out;
+}
