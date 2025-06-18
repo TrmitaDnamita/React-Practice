@@ -3,9 +3,9 @@ import { TURNS } from '../constants.js';
 
 import '../styles/Board.css';
 
-export function Board ({turn, board, updateBoard, updateTurn}) {
+export function Board ({turn, board, updateBoard, changeTurn}) {
 	const switchTurn = (player) => {
-		return (turn === player) ? null : () => {updateTurn(turn);};
+		return (turn === player) ? null : () => {changeTurn(turn);};
 	};
 	
 	const boardMap = board.map((_, index) => {

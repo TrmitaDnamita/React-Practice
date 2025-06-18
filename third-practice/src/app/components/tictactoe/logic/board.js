@@ -1,4 +1,4 @@
-import { TURNS, PLAYERS_STATUS, WINNER_COMBOS } from "../constants";
+import { TURNS, PLAYERS_STATUS, WINNER_COMBOS } from "../constants.js";
 
 export const UpdateGame = (board) => {
 	for (const [a, b, c] of WINNER_COMBOS) {
@@ -28,7 +28,7 @@ export const UpdateGame = (board) => {
 	return PLAYERS_STATUS.DRAW;
 };
 
-export const UpdateTurn = (turn) => {
+export const GetNextTurn = (turn) => {
 	const nextTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
 	return nextTurn;
 };
