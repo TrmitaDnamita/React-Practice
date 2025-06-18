@@ -1,12 +1,12 @@
 export const TURNS = {
-  X: 'X',
-  O: 'O',
+  X: '⛌',
+  O: '◯',
   EMPTY: '-'
 };
 
 export const PLAYERS_STATUS = {
-  X: 'X WON! 🥳🎉',
-  O: 'O WON! 🥳🎉',    
+  X: '⛌ WON! 🥳🎉',
+  O: '◯ WON! 🥳🎉',    
   DRAW: 'Match Ended in Draw! 🤡',
   SKIP: 'Continue'  
 }

@@ -1,9 +1,9 @@
 .cell{
-	width: var(--width-lg);
-	height: var(--width-lg);
+	width: var(--clamp-min);
+	height: var(--clamp-min);
 	
 	border: 2px solid var(--border-color);
-	border-radius: var(--width-sm);
+	border-radius: var(--clamp-min);
 	
 	display: grid;
 	place-items: center;
@@ -28,8 +28,21 @@
 }
 
 .cell.filled:hover {
-	border: 2px solid var(--border-warn-color);
+	border: 2px solid var(--problem-color);
 	background-color: var(--cell-bg-warn-color);
 	box-shadow: none;
 	transform: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .cell {
+    font-size: var(--size-xxl);
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  .cell {
+    font-size: var(--size-xxxl);
+  }
+  
 }

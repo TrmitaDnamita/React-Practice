@@ -1,0 +1,26 @@
+.turn {
+	display: flex;
+	justify-content: space-evenly;
+	
+	margin-block: var(--padding-xxl);
+}
+
+.turn .selected {
+	border: 2px solid var(--turn-color);
+	background-color: var(--turn-bg-color);
+	cursor: default;
+}
+
+.turn .selected:hover {
+	transform: none;
+	box-shadow: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  
+  
+}

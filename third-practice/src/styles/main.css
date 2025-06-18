@@ -18,15 +18,30 @@ body {
   justify-content: center;
   align-items: center;
   
+  max-width: var(--tablet-width);
   min-width: var(--min-width);
   min-height: 100dvh;
   height: 100%;
   
-  border: 1px solid var(--light-color);
   background-color: var(--dark-color);
   
   user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  body {
+    max-width: var(--desktop-width);
+    min-width: var(--mobile-width);
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  body {
+    max-width: var(--max-width);
+    min-width: var(--tablet-width);
+  }
+  
 }

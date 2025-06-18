@@ -1,0 +1,49 @@
+.replay button {
+	background-color: var(--turn-bg-color);
+	color: var(--light-color);
+	
+	font-size: var(--size-lg);
+	font-weight: bold;
+	text-shadow: var(--text-shadow);
+	
+	min-width: var(--width-lg);
+	
+	padding-inline: var(--padding-lg);
+	padding-block: var(--padding-sm);
+	
+	border: 2px solid var(--warning-color);
+	border-radius: var(--width-sm);
+	
+	cursor: pointer;
+	
+	transition: .5s ease-in-out;
+	animation: pop-in 0.5s ease-in-out forwards;
+}
+
+.replay button:hover {
+	background-color: var(--cell-warn-color);
+	
+	border: 2px solid var(--problem-color);
+	translate: 0 1px;
+	box-shadow: var(--box-shadow);
+	
+	transition: .1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+	.replay button {
+    font-size: var(--size-xl);
+		
+		min-width: var(--width-lg);
+		padding-block: var(--padding-md);
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+	.replay button {
+    font-size: var(--size-xxl);
+		
+		min-width: var(--width-xxl);
+		padding-block: var(--padding-lg);
+  }
+}

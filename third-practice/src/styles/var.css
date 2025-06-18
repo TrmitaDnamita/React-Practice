@@ -2,16 +2,27 @@
   --light-color: #e7dfdf;
   --dark-color: #1d1c1c;
   --user-color: #1d9bf0;
-  --cancel-color: #bd0313;
+  --warning-color: rgba(212, 125, 43, 0.411);
+	--problem-color: #ff00005b;
+  
+  --cell-color: #1d9cf0e7;
+	--cell-bg-color: #1d9cf04f;
+	--cell-bg-warn-color: #ff000009;
+	
+	--turn-color: #3566a7;
+	--turn-bg-color: #72c7ff33;
   
   --border-color: rgba(255, 255, 255, 0.411);
+  
+  --text-shadow: 1px 1px black, -1px -1px black;
+	--box-shadow: 6px 6px 16px black, -1px -1px 4px var(--light-color);
   
   --width-xsm: 24px;
   --width-sm: 40px;
   --width-md: 64px;
   --width-lg: 76px;
-  --width-xl: 120px;
-  --width-xxl: 240px;
+  --width-xl: 108px;
+  --width-xxl: 224px;
   
   --gap-sm: 2px;
   --gap-md: 5px;
@@ -31,10 +42,25 @@
   --size-lg: 18px;
   --size-xl: 24px;
   --size-xxl: 32px;
+  --size-xxxl: 48px;
+  --size-super-sm: 64px;
   
   --min-width: 320px;
   --mobile-width: 420px;
   --tablet-width: 768px;
   --desktop-width: 1280px;
   --max-width: 1440px;
+  
+  --clamp-min: clamp(64px, 10vw, 128px);
+}
+
+@keyframes pop-in {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
