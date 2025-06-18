@@ -1,4 +1,3 @@
-import { use } from 'react';
 import { WhoToFollow } from './components/Widgets/WhoToFollow.jsx'
 import './styles/App.css'
 
@@ -39,13 +38,13 @@ const recommendations = () => {
   const recommendation = [];
   const usedRecommendation = new Set();
   
-  const usersByInterestLenght = usersByInterest.length;
+  const usersByInterestLength = usersByInterest.length;
   let index = 0;
   
   while (recommendation.length < 3) {
-    const user = usersByInterest[index % usersByInterestLenght].userName;
+    const user = usersByInterest[index % usersByInterestLength].userName;
     if (Math.random() * 100 > 50 && !usedRecommendation.has(user)) {
-      recommendation.push(usersByInterest[index % usersByInterestLenght]);
+      recommendation.push(usersByInterest[index % usersByInterestLength]);
       usedRecommendation.add(user);
     }
     index++;
