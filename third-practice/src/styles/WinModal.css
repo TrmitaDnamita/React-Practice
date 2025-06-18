@@ -27,12 +27,7 @@
 }
 
 .modal-title {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	
-	gap: var(--gap-lg);
+	padding-bottom: var(--padding-md);
 }
 
 .winner {
@@ -45,39 +40,14 @@
 	width: var(--width-md);
 	height: var(--width-md);
 	
+	margin: auto;
+	margin-bottom: var(--padding-md);
+	
 	border-radius: var(--width-md);
 	border: 2px solid var(--light-color);
 	
 	color: var(--light-color);
 	font-weight: bolder;
-}
-
-.modal-window button {
-	font-size: var(--size-lg);
-	font-weight: bolder;
-	
-	margin-block: var(--padding-md);
-	
-	padding-block: var(--padding-md);
-	padding-inline: var(--padding-lg);
-	
-	border-radius: var(--size-md);
-	
-	color: var(--dark-color);
-	background-color: var(--light-color);
-	border: 2px solid var(--dark-color);
-	
-	cursor: pointer;
-}
-
-.modal-window button:hover {
-	background-color: var(--dark-color);
-	color: var(--light-color);
-	
-	border: 2px solid var(--light-color);
-	box-shadow: var(--box-shadow);
-	
-	transition: 0.2s ease-in-out;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
