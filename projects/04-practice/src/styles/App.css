@@ -1,0 +1,63 @@
+.header-class {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.ul-class {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  background-color: #242424;
+  padding: 16px;
+  
+  place-items: center;
+  border-radius: 10px;
+  
+  align-items: stretch;
+}
+
+.li-movies {
+  display: flex;
+  flex-direction: column;
+}
+
+.li-movies > img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+span {
+  display: flex;
+  place-self: center;
+  margin-top: 16px;
+  
+  padding: 10px 16px;
+  box-shadow: 1px 1px 16px black, 0px 0px 6px white;
+  border-radius: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.footer-class {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.page-number {
+  display: flex;
+  place-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.page-number .clicked {
+  font-size: 18px;
+  box-shadow: 1px 1px 16px black inset, 0px 0px 6px white inset;
+  color: black; background-color: whitesmoke;
+}
