@@ -28,36 +28,44 @@
   border-radius: 4px;
   object-fit: contain;
 }
-
+/*
 span {
-  display: flex;
-  place-self: center;
-  margin-top: 16px;
   
-  padding: 10px 16px;
-  box-shadow: 1px 1px 16px black, 0px 0px 6px white;
-  border-radius: 8px;
 }
-
+*/
 button {
   cursor: pointer;
 }
 
 .footer-class {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
 }
 
 .page-number {
   display: flex;
-  place-items: center;
-  gap: 8px;
+  place-self: center;
+  
+  margin-inline: 4px;
+  padding: 0px 8px;
+  box-shadow: 1px 1px 10px black, 0px 0px 6px white;
+  border-radius: 8px;
+  
   cursor: pointer;
+  user-select: none;
 }
 
-.page-number .clicked {
+.page-number:hover {
+  background-color: #242424be;
+  box-shadow: 1px 1px 16px black, 0px 0px 10px white;
+}
+
+.actual {
   font-size: 18px;
-  box-shadow: 1px 1px 16px black inset, 0px 0px 6px white inset;
-  color: black; background-color: whitesmoke;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.781) inset, 0px 0px 4px rgba(255, 255, 255, 0.438) inset;
+  color: rgba(187, 187, 187, 0.678); background-color: rgba(43, 42, 42, 0.295);
+  border: 1px solid rgba(255, 255, 255, 0.062);
+  cursor: default;
+  pointer-events: none;
 }

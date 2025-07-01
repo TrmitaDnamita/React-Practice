@@ -27,3 +27,4 @@ dist-ssr
 
 #ignore projects
 projects/ignore/*
+projects_TypeScript/ignore/*
